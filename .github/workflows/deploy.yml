@@ -1,10 +1,10 @@
-name: CI/CD React App
+name: CI/CD Vite React App
 
 on:
   push:
-    branches: [master]
+    branches: [main]  # Your default branch is 'main', not 'master'
   pull_request:
-    branches: [master]
+    branches: [main]
 
 permissions:
   contents: write  
@@ -42,8 +42,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "nbsgr"
-          git config --global user.email "balaganesh7944978@gmail.com"
           npm install -g gh-pages
-          npx gh-pages -d dist -u "nbsgr <balaganesh7944978@gmail.com>" -r https://x-access-token:${GITHUB_TOKEN}@github.com/nbsgr/S219_CICD.git
-          
+          npx gh-pages -d dist -u "nbsgr <balaganesh7944978@gmail.com>" -r https://x-access-token:${GITHUB_TOKEN}@github.com/nbsgr/tic-tac-toe.git
