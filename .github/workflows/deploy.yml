@@ -2,9 +2,9 @@ name: Vite React App
 
 on:
   push:
-    branches: [main]  # Your default branch is 'main', not 'master'
+    branches: [master]  # Your default branch is 'main', not 'master'
   pull_request:
-    branches: [main]
+    branches: [master]
 
 permissions:
   contents: write  
