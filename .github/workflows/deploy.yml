@@ -1,4 +1,4 @@
-name: CI/CD Vite React App
+name: Vite React App
 
 on:
   push:
